@@ -30,7 +30,30 @@ function App() {
 
   return (
     <div className="App">
-      
+      <h1>Catalog Items</h1>
+        <input  
+          onChange={e => setFormData({ ...formData, 'title': e.target.value})}
+          placeholder="Item Title"
+          value={formData.title}
+        />
+        <input
+          onChange={e => setFormData({ ...formData, 'description': e.target.value})}
+          placeholder="Item Description"
+          value={formData.description}
+        />
+        <button onClick={createItem}>Create Item</button>
+        <div style={{marginBottom: 30}}>
+          {
+            items.map(item => (
+              <div key={item.id || item.name}>
+                <h2>{item.name}</h2>
+                <p>{item.title}</p>
+                <p>{item.description}</p>
+                <p>{item.reservePriceEnabled}</p>
+              </div>
+            ))
+          }
+        </div>
     </div>
   );
 }

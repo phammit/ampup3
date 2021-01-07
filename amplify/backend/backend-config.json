@@ -24,5 +24,11 @@
         }
       }
     }
+  },
+  "storage": {
+    "ampup3resource": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

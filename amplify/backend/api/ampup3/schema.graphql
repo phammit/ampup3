@@ -3,4 +3,5 @@ type catalogItem @model {
   title: String!
   description: String!
   reservePriceEnabled: Boolean!
+  image: String
 }

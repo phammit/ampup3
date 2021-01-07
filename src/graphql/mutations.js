@@ -11,6 +11,7 @@ export const createCatalogItem = /* GraphQL */ `
       title
       description
       reservePriceEnabled
+      image
       createdAt
       updatedAt
     }
@@ -26,6 +27,7 @@ export const updateCatalogItem = /* GraphQL */ `
       title
       description
       reservePriceEnabled
+      image
       createdAt
       updatedAt
     }
@@ -41,6 +43,7 @@ export const deleteCatalogItem = /* GraphQL */ `
       title
       description
       reservePriceEnabled
+      image
       createdAt
       updatedAt
     }

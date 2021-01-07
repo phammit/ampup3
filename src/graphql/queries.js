@@ -8,6 +8,7 @@ export const getCatalogItem = /* GraphQL */ `
       title
       description
       reservePriceEnabled
+      image
       createdAt
       updatedAt
     }
@@ -25,6 +26,7 @@ export const listCatalogItems = /* GraphQL */ `
         title
         description
         reservePriceEnabled
+        image
         createdAt
         updatedAt
       }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { API, Storage } from 'aws-amplify';
 import { listCatalogItems } from './graphql/queries';
-import { createCatalogItem as createItem } from './graphql/mutations';
+import { createCatalogItem } from './graphql/mutations';
 
 
 const initialItemState = { title: '', description: '', reservePriceEnabled: false };
@@ -31,7 +31,7 @@ function App() {
 
   async function createItem() {
     if (!formData.title || !formData.description) return;
-    await API.graphql({ query: createItem, variables: { input: formData } });
+    await API.graphql({ query: createCatalogItem, variables: { input: formData } });
     if (formData.image) {
       const image = await Storage.get(formData.image);
       formData.image = image;
